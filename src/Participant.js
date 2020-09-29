@@ -3,8 +3,8 @@ import STORE from './store';
 
 
 function Participant(props) {
-  const onStage = (props.onStage) ? 'on stage' : 'left session';
-  const inSession = (!props.inSession) ? 'in-session hidden' : 'in-session';
+  const onStage = (props.onStage) ? 'on stage' : 'not on stage';
+  const inSession = (props.inSession) ? 'in-session' : 'left-session';
     return (
       <div className='user'>
         <div className='img'>
