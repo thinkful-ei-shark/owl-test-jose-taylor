@@ -1,5 +1,5 @@
-const STORE = [
-    participants = [
+const STORE = {
+    participants: [
         {
             id: 1,
             name: 'Koren Templeton',
@@ -40,4 +40,6 @@ const STORE = [
             onStage: true
         }
     ],
-];
+};
+
+export default STORE;

@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+.user-list {
+  height: 100vh;
+  width: 30%;
+  background-color: whitesmoke;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  height: 80px;
+
+}
+
+.user {
+  display: flex;
+  border: 1px solid red;
+}
+
+.in-session {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: green; 
+}
+
+.hidden {
+  /* display: none; */
+}
+
+.user-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-status span {
+  font-size: 10px;
+}

@@ -1,15 +1,14 @@
-import React from 'React';
-import './index.css';
+import React from 'react';
+import STORE from './store';
+import Participant from './Participant';
 
-function ParticipantList() {
+const store = STORE.participants;
+
+function ParticipantList(props) {
+
+  
     return (
-        <div>
-          <button
-            type='button'>
-            delete
-          </button>
-          <h3>Title</h3>
-          <p>Content</p>
+    <div className='user-list'>
         </div>
       )
 };
