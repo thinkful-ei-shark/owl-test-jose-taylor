@@ -1,8 +1,7 @@
-import React from 'React';
-import './index.css';
+import React from 'react';
 
 function Stage() {
-    return 'Hello World';
+    return <p>'Hello World'</p>;
 };
 
 

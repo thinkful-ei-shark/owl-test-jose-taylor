@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ParticipantList from './ParticipantList';
+import STORE from './store'
 
 ReactDOM.render(
-  <div>
-    <App />
-    <ParticipantList />
-  </div>,
+  <App store={STORE} />,
   document.getElementById('root')
 );
 

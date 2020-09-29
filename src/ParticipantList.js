@@ -1,17 +1,20 @@
-import React from 'React';
-import './index.css';
+import React from 'react';
+import Participant from './Participant';
 
-function ParticipantList() {
+function ParticipantList(props) {
     return (
-        <div>
-          <button
-            type='button'>
-            delete
-          </button>
-          <h3>Title</h3>
-          <p>Content</p>
-        </div>
-      )
+    <div className='user-list'>
+      {props.participants.map((person) =>
+        <Participant 
+            key={person.id}
+            name={person.name}
+            avatar={person.avatar}
+            inSession={person.inSession}
+            onStage={person.onStage}
+        />
+      )}
+    </div>
+  )
 };
 
 
