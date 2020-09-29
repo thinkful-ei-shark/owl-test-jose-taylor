@@ -22,4 +22,14 @@ function Participant(props) {
     )
 }
 
+function userStatusChange() {
+if (props.inSession) {
+	return 'in session';
+} else if (props.onStage) {
+	return 'on stage';
+} else if (!props.onStage && !props.inSession) {
+	return 'left session';
+	status.classList.add('left-session');
+}
+}
 export default Participant;
