@@ -1,18 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ParticipantList from './ParticipantList';
+import './index.css';
+import Stage from './Stage';
+import { render } from '@testing-library/react';
+import store from './store';
+import SideBar from './SideBar';
 
-function App(props) {
-  const {store} = props;
-  console.log(store.participants);
-  return (
-    <div className="App">
-            <ParticipantList
-              participants={store.participants}
-            />
-    </div>
-  );
+class App extends React.Component {
+  state = store
+
+  toggleChat = () => {
+    this.setState({
+      chat: !this.state.chat
+    })
+  };
+
+  render() {
+    return (
+      <div className='App'>
+        <SideBar participants={this.state.participants} chat={this.state.chat} chatEvents={this.state.chatEvents} toggleChat={this.toggleChat} />
+        <Stage participants={this.state.participants} />
+      </div>
+    );
+  }
 }
 
 export default App;

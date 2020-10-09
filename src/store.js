@@ -1,4 +1,6 @@
 const STORE = {
+    chat: false,
+    participantList: true,
     participants: [
         {
             id: 1,
